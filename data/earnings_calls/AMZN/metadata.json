@@ -1,0 +1,109 @@
+{
+  "ticker": "AMZN",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.759488",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q3.pdf",
+      "file_size": 40135,
+      "character_count": 46080,
+      "word_count": 7785
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.699330",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q2.pdf",
+      "file_size": 42905,
+      "character_count": 51010,
+      "word_count": 8611
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.633986",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q1.pdf",
+      "file_size": 41800,
+      "character_count": 48648,
+      "word_count": 8272
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.572584",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q4.pdf",
+      "file_size": 40828,
+      "character_count": 47928,
+      "word_count": 8072
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.513828",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q3.pdf",
+      "file_size": 40434,
+      "character_count": 46307,
+      "word_count": 7749
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.455636",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q2.pdf",
+      "file_size": 40493,
+      "character_count": 46856,
+      "word_count": 7978
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.396620",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q1.pdf",
+      "file_size": 19569,
+      "character_count": 10868,
+      "word_count": 1845
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.374074",
+      "source": "manual_pdf",
+      "source_file": "AMZN_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2023_Q4.pdf",
+      "file_size": 43537,
+      "character_count": 52523,
+      "word_count": 8853
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "ticker": "META",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.823372",
+      "source": "manual_pdf",
+      "source_file": "META_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2025_Q3.pdf",
+      "file_size": 52949,
+      "character_count": 54325,
+      "word_count": 9367
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.757094",
+      "source": "manual_pdf",
+      "source_file": "META_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2025_Q2.pdf",
+      "file_size": 53625,
+      "character_count": 55224,
+      "word_count": 9414
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.690318",
+      "source": "manual_pdf",
+      "source_file": "META_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2025_Q1.pdf",
+      "file_size": 53349,
+      "character_count": 54050,
+      "word_count": 9228
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.618429",
+      "source": "manual_pdf",
+      "source_file": "META_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2024_Q4.pdf",
+      "file_size": 53189,
+      "character_count": 53940,
+      "word_count": 9355
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.551948",
+      "source": "manual_pdf",
+      "source_file": "META_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2024_Q3.pdf",
+      "file_size": 52067,
+      "character_count": 51944,
+      "word_count": 8885
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.488106",
+      "source": "manual_pdf",
+      "source_file": "META_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2024_Q2.pdf",
+      "file_size": 54658,
+      "character_count": 56886,
+      "word_count": 9886
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.419625",
+      "source": "manual_pdf",
+      "source_file": "META_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2024_Q1.pdf",
+      "file_size": 28870,
+      "character_count": 12135,
+      "word_count": 2098
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.394668",
+      "source": "manual_pdf",
+      "source_file": "META_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/META/META_FY2023_Q4.pdf",
+      "file_size": 54122,
+      "character_count": 55773,
+      "word_count": 9474
+    }
+  ]
+}

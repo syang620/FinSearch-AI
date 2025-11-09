@@ -1,0 +1,122 @@
+{
+  "ticker": "MSFT",
+  "earnings_calls": [
+    {
+      "year": 2026,
+      "quarter": 1,
+      "file": "2026_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.429441",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2026_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2026_Q1.pdf",
+      "file_size": 37545,
+      "character_count": 52334,
+      "word_count": 8751
+    },
+    {
+      "year": 2025,
+      "quarter": 4,
+      "file": "2025_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.364497",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2025_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2025_Q4.pdf",
+      "file_size": 34996,
+      "character_count": 48450,
+      "word_count": 8064
+    },
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.305779",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2025_Q3.pdf",
+      "file_size": 36117,
+      "character_count": 48988,
+      "word_count": 8093
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.244070",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2025_Q2.pdf",
+      "file_size": 38836,
+      "character_count": 53132,
+      "word_count": 8836
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.175931",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2025_Q1.pdf",
+      "file_size": 39709,
+      "character_count": 56062,
+      "word_count": 9333
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.108610",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2024_Q4.pdf",
+      "file_size": 39180,
+      "character_count": 53482,
+      "word_count": 8698
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.035961",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2024_Q3.pdf",
+      "file_size": 39510,
+      "character_count": 55431,
+      "word_count": 9032
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.964883",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2024_Q2.pdf",
+      "file_size": 40441,
+      "character_count": 56123,
+      "word_count": 9128
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.892990",
+      "source": "manual_pdf",
+      "source_file": "MSFT_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/MSFT/MSFT_FY2024_Q1.pdf",
+      "file_size": 39326,
+      "character_count": 54235,
+      "word_count": 8758
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: finsearch-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - backend-data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LLM_DEVICE=cpu
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: finsearch-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000/api/v1
+    command: npm run dev
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend-data:

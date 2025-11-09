@@ -1,0 +1,109 @@
+{
+  "ticker": "AVGO",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.235301",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2025_Q3.pdf",
+      "file_size": 50953,
+      "character_count": 41818,
+      "word_count": 7388
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.175280",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2025_Q2.pdf",
+      "file_size": 47623,
+      "character_count": 35577,
+      "word_count": 6236
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.119136",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2025_Q1.pdf",
+      "file_size": 49545,
+      "character_count": 39538,
+      "word_count": 6970
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.061937",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2024_Q4.pdf",
+      "file_size": 48293,
+      "character_count": 37841,
+      "word_count": 6608
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.006288",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2024_Q3.pdf",
+      "file_size": 50274,
+      "character_count": 40689,
+      "word_count": 7108
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.942011",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2024_Q2.pdf",
+      "file_size": 50716,
+      "character_count": 40880,
+      "word_count": 7038
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.879892",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2024_Q1.pdf",
+      "file_size": 50223,
+      "character_count": 40296,
+      "word_count": 6880
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.818375",
+      "source": "manual_pdf",
+      "source_file": "AVGO_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AVGO/AVGO_FY2023_Q4.pdf",
+      "file_size": 48488,
+      "character_count": 38984,
+      "word_count": 6593
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "ticker": "JPM",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.326666",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q3.pdf",
+      "file_size": 47880,
+      "character_count": 52645,
+      "word_count": 9541
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.256866",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q2.pdf",
+      "file_size": 56967,
+      "character_count": 60375,
+      "word_count": 10715
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.157130",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q1.pdf",
+      "file_size": 54914,
+      "character_count": 59103,
+      "word_count": 10286
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:11.065176",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q4.pdf",
+      "file_size": 44948,
+      "character_count": 46746,
+      "word_count": 8163
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.996110",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q3.pdf",
+      "file_size": 54457,
+      "character_count": 60866,
+      "word_count": 10781
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.905457",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q2.pdf",
+      "file_size": 48452,
+      "character_count": 52456,
+      "word_count": 9155
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.830589",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q1.pdf",
+      "file_size": 26999,
+      "character_count": 16916,
+      "word_count": 2981
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.792699",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2023_Q4.pdf",
+      "file_size": 42815,
+      "character_count": 43926,
+      "word_count": 7572
+    }
+  ]
+}

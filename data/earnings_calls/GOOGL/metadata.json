@@ -1,0 +1,109 @@
+{
+  "ticker": "GOOGL",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.726878",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2025_Q3.pdf",
+      "file_size": 46248,
+      "character_count": 48113,
+      "word_count": 7974
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.666599",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2025_Q2.pdf",
+      "file_size": 47837,
+      "character_count": 50726,
+      "word_count": 8435
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.602956",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2025_Q1.pdf",
+      "file_size": 47676,
+      "character_count": 50014,
+      "word_count": 8237
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.539398",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2024_Q4.pdf",
+      "file_size": 49177,
+      "character_count": 53285,
+      "word_count": 8793
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.473298",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2024_Q3.pdf",
+      "file_size": 52148,
+      "character_count": 56842,
+      "word_count": 9477
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.402469",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2024_Q2.pdf",
+      "file_size": 48563,
+      "character_count": 51025,
+      "word_count": 8549
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.335774",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2024_Q1.pdf",
+      "file_size": 28316,
+      "character_count": 16920,
+      "word_count": 2926
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:10.297342",
+      "source": "manual_pdf",
+      "source_file": "GOOGL_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/GOOGL/GOOGL_FY2023_Q4.pdf",
+      "file_size": 48125,
+      "character_count": 50426,
+      "word_count": 8251
+    }
+  ]
+}

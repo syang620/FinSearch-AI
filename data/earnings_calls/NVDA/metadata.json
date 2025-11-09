@@ -1,0 +1,122 @@
+{
+  "ticker": "NVDA",
+  "earnings_calls": [
+    {
+      "year": 2026,
+      "quarter": 2,
+      "file": "2026_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.975615",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2026_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2026_Q2.pdf",
+      "file_size": 44296,
+      "character_count": 45262,
+      "word_count": 7469
+    },
+    {
+      "year": 2026,
+      "quarter": 1,
+      "file": "2026_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.922892",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2026_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2026_Q1.pdf",
+      "file_size": 45439,
+      "character_count": 46693,
+      "word_count": 7683
+    },
+    {
+      "year": 2025,
+      "quarter": 4,
+      "file": "2025_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.865989",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2025_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2025_Q4.pdf",
+      "file_size": 45399,
+      "character_count": 46972,
+      "word_count": 7758
+    },
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.807991",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2025_Q3.pdf",
+      "file_size": 46893,
+      "character_count": 48878,
+      "word_count": 8207
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.745533",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2025_Q2.pdf",
+      "file_size": 48894,
+      "character_count": 52888,
+      "word_count": 8778
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.680219",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2025_Q1.pdf",
+      "file_size": 47449,
+      "character_count": 49751,
+      "word_count": 8181
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.616385",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2024_Q4.pdf",
+      "file_size": 46313,
+      "character_count": 48600,
+      "word_count": 7936
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.556929",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2024_Q3.pdf",
+      "file_size": 49342,
+      "character_count": 54385,
+      "word_count": 8987
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:12.492005",
+      "source": "manual_pdf",
+      "source_file": "NVDA_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/NVDA/NVDA_FY2024_Q2.pdf",
+      "file_size": 47269,
+      "character_count": 50111,
+      "word_count": 8247
+    }
+  ]
+}

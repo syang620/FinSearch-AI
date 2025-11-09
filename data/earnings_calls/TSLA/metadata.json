@@ -1,0 +1,109 @@
+{
+  "ticker": "TSLA",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.659204",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q3.pdf",
+      "file_size": 46651,
+      "character_count": 48305,
+      "word_count": 8408
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.590924",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q2.pdf",
+      "file_size": 46032,
+      "character_count": 44472,
+      "word_count": 7961
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.523847",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q1.pdf",
+      "file_size": 62889,
+      "character_count": 66849,
+      "word_count": 11913
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.418378",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q4.pdf",
+      "file_size": 51210,
+      "character_count": 53362,
+      "word_count": 9548
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.337991",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q3.pdf",
+      "file_size": 53235,
+      "character_count": 54757,
+      "word_count": 9737
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.248462",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q2.pdf",
+      "file_size": 48574,
+      "character_count": 47174,
+      "word_count": 8458
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.175898",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q1.pdf",
+      "file_size": 58218,
+      "character_count": 56633,
+      "word_count": 10082
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:13.066531",
+      "source": "manual_pdf",
+      "source_file": "TSLA_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2023_Q4.pdf",
+      "file_size": 52402,
+      "character_count": 49512,
+      "word_count": 8708
+    }
+  ]
+}

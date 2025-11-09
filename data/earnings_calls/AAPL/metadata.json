@@ -1,0 +1,109 @@
+{
+  "ticker": "AAPL",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 4,
+      "file": "2025_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.307413",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2025_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2025_Q4.pdf",
+      "file_size": 36933,
+      "character_count": 46427,
+      "word_count": 7864
+    },
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.233470",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2025_Q3.pdf",
+      "file_size": 35755,
+      "character_count": 46610,
+      "word_count": 8014
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.168020",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2025_Q2.pdf",
+      "file_size": 38070,
+      "character_count": 46826,
+      "word_count": 8037
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.096321",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2025_Q1.pdf",
+      "file_size": 37418,
+      "character_count": 45902,
+      "word_count": 7903
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:09.018606",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2024_Q4.pdf",
+      "file_size": 37839,
+      "character_count": 46227,
+      "word_count": 7939
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:08.946649",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2024_Q3.pdf",
+      "file_size": 36760,
+      "character_count": 46314,
+      "word_count": 7978
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:08.878834",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2024_Q2.pdf",
+      "file_size": 37908,
+      "character_count": 47068,
+      "word_count": 8116
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-08T15:25:08.804796",
+      "source": "manual_pdf",
+      "source_file": "AAPL_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AAPL/AAPL_FY2024_Q1.pdf",
+      "file_size": 35134,
+      "character_count": 45031,
+      "word_count": 7722
+    }
+  ]
+}
