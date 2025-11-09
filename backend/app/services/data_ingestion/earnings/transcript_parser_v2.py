@@ -26,6 +26,12 @@ except ImportError:
     tiktoken = None
     logging.warning("tiktoken not installed - token counts will be estimated")
 
+# Import metadata schema helpers
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from metadata_schema import compute_period, compute_chunk_id, get_current_timestamp
+
 logger = logging.getLogger(__name__)
 
 
@@ -103,7 +109,8 @@ class TranscriptParserV2:
             speakers_with_roles,
             ticker,
             year,
-            quarter
+            quarter,
+            pdf_path  # Pass source file path
         )
 
         # Create Q&A exchanges
@@ -284,11 +291,20 @@ class TranscriptParserV2:
         speakers: Dict[str, Dict],
         ticker: str,
         year: int,
-        quarter: int
+        quarter: int,
+        source_file: str
     ) -> List[Dict]:
         """Parse utterances from text"""
         utterances = []
         utterance_id = 0
+
+        # Compute standardized fields
+        parsed_at = get_current_timestamp()
+        fiscal_year = year
+        quarter_str = f"Q{quarter}"
+        period = compute_period(fiscal_year, quarter_str)
+        filing_date = f"{year}-{quarter * 3:02d}-01"  # Approximate
+        doc_id = f"{ticker}_TRANSCRIPT_{year}_{quarter_str}"
 
         # Create speaker lookup by original name
         speaker_lookup = {info['original_name']: name for name, info in speakers.items()}
@@ -335,22 +351,49 @@ class TranscriptParserV2:
             # Count tokens
             token_count = self._count_tokens(utterance_text)
 
-            # Create utterance unit
+            # Compute chunk_id
+            chunk_id = compute_chunk_id(doc_id, utterance_id, 'utterance')
+            utt_id = f"u_{utterance_id:04d}"
+
+            # Create utterance unit with unified metadata schema
             utterance_unit = {
-                'doc_id': f"{ticker}_{year}_Q{quarter}",
+                # Core identifiers
+                'doc_id': doc_id,
+                'chunk_id': chunk_id,
+
+                # Company information
                 'ticker': ticker,
-                'year': year,
-                'quarter': quarter,
-                'filing_date': f"{year}-{quarter * 3:02d}-01",  # Approximate
-                'phase': phase,
-                'speaker_name': speaker_normalized,
-                'speaker_role': speaker_info.get('role'),
-                'speaker_firm': speaker_info.get('firm'),
-                'utterance_id': f"u_{utterance_id:04d}",
-                'utterance_type': utterance_type,
+                'company': ticker,  # Use ticker as company name
+
+                # Document type and period
+                'doc_type': 'earnings_transcript',
+                'fiscal_year': fiscal_year,
+                'quarter': quarter_str,
+                'period': period,
+                'filing_date': filing_date,
+
+                # Section/structure (null for transcripts)
+                'section_id': None,
+                'section_title': None,
+
+                # Chunk information
+                'unit_type': 'utterance',
+                'unit_index': utterance_id,
                 'text': utterance_text,
                 'char_count': len(utterance_text),
                 'word_count': len(utterance_text.split()),
+
+                # Source tracking
+                'source_file': source_file,
+                'parsed_at': parsed_at,
+
+                # Transcript-specific fields
+                'phase': phase,
+                'speaker_name': speaker_normalized,
+                'speaker_role': speaker_info.get('role', 'unknown'),
+                'speaker_firm': speaker_info.get('firm'),
+                'utterance_id': utt_id,
+                'utterance_type': utterance_type,
                 'token_count': token_count,
                 'exchange_id': None,  # Will be populated by _create_qa_exchanges
                 'exchange_role': None

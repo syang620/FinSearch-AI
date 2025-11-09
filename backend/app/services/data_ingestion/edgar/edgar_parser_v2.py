@@ -22,6 +22,12 @@ from bs4 import BeautifulSoup
 import html2text
 import pandas as pd
 
+# Import metadata schema helpers
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from metadata_schema import compute_period, compute_chunk_id, get_current_timestamp
+
 logger = logging.getLogger(__name__)
 
 
@@ -77,7 +83,8 @@ class EDGARParserV2:
         html_path: str,
         ticker: str,
         doc_type: str,
-        filing_date: str
+        filing_date: str,
+        quarter: Optional[str] = None
     ) -> Tuple[List[Dict], List[Dict], str]:
         """
         Parse EDGAR filing to JSONL format
@@ -87,6 +94,7 @@ class EDGARParserV2:
             ticker: Stock ticker symbol
             doc_type: Filing type ('10-K' or '10-Q')
             filing_date: Filing date (YYYY-MM-DD)
+            quarter: Quarter (Q1-Q4 for 10-Q, None for 10-K)
 
         Returns:
             Tuple of (paragraph_units, table_metadata, markdown_export)
@@ -100,8 +108,22 @@ class EDGARParserV2:
         # Step 1: Clean XBRL HTML
         soup = self._clean_xbrl_html(html_content)
 
+        # Extract fiscal year from filing_date
+        fiscal_year = int(filing_date[:4])
+
+        # Determine quarter for doc_id
+        if doc_type == '10-K':
+            quarter_str = 'FY'
+            quarter_code = None  # For 10-K, quarter is None
+        else:
+            quarter_str = quarter if quarter else 'Q1'
+            quarter_code = quarter_str
+
         # Step 2: Extract tables to CSV
-        doc_id = f"{ticker}_{doc_type.replace('-', '')}_{filing_date[:4]}"
+        doc_id = f"{ticker}_{doc_type.replace('-', '')}_{fiscal_year}"
+        if doc_type == '10-Q' and quarter_code:
+            doc_id += f"_{quarter_code}"
+
         tables_metadata = self._extract_tables(soup, doc_id, ticker, Path(html_path).parent)
 
         # Step 3: Detect sections
@@ -117,7 +139,10 @@ class EDGARParserV2:
             ticker,
             doc_type,
             filing_date,
-            doc_id
+            doc_id,
+            html_path,
+            fiscal_year,
+            quarter_code
         )
 
         # Step 6: Generate markdown export
@@ -291,7 +316,10 @@ class EDGARParserV2:
         ticker: str,
         doc_type: str,
         filing_date: str,
-        doc_id: str
+        doc_id: str,
+        source_file: str,
+        fiscal_year: int,
+        quarter: Optional[str]
     ) -> List[Dict]:
         """
         Extract paragraph-level units from markdown text
@@ -303,12 +331,20 @@ class EDGARParserV2:
             doc_type: Filing type
             filing_date: Filing date
             doc_id: Document ID
+            source_file: Path to source HTML file
+            fiscal_year: Fiscal year
+            quarter: Quarter (Q1-Q4 or None for 10-K)
 
         Returns:
             List of paragraph unit dictionaries
         """
         paragraphs = []
         unit_index = 0
+
+        # Compute standardized fields
+        parsed_at = get_current_timestamp()
+        quarter_str = quarter if quarter else 'FY'
+        period = compute_period(fiscal_year, quarter_str)
 
         # Create section boundaries map
         section_map = {}
@@ -337,19 +373,51 @@ class EDGARParserV2:
                     section_title = stitle
                     break
 
-            # Create paragraph unit
+            # Compute chunk_id
+            chunk_id = compute_chunk_id(doc_id, unit_index, 'paragraph')
+
+            # Create paragraph unit with unified metadata schema
             para_unit = {
+                # Core identifiers
                 'doc_id': doc_id,
+                'chunk_id': chunk_id,
+
+                # Company information
                 'ticker': ticker,
+                'company': ticker,  # Use ticker as company name
+
+                # Document type and period
                 'doc_type': doc_type,
+                'fiscal_year': fiscal_year,
+                'quarter': quarter_str,
+                'period': period,
                 'filing_date': filing_date,
+
+                # Section/structure
                 'section_id': section_id,
                 'section_title': section_title,
+
+                # Chunk information
                 'unit_type': 'paragraph',
                 'unit_index': unit_index,
                 'text': para_text,
                 'char_count': len(para_text),
-                'word_count': len(para_text.split())
+                'word_count': len(para_text.split()),
+
+                # Source tracking
+                'source_file': source_file,
+                'parsed_at': parsed_at,
+
+                # Transcript-specific fields (null for EDGAR)
+                'phase': None,
+                'speaker_name': None,
+                'speaker_role': None,
+                'speaker_firm': None,
+                'utterance_id': None,
+                'utterance_type': None,
+                'token_count': None,
+                'exchange_id': None,
+                'exchange_role': None
             }
 
             paragraphs.append(para_unit)
