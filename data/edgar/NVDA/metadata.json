@@ -9,7 +9,7 @@
       "raw_file": "raw_10-Q_2025_Q3.htm",
       "parsed_file": "10-Q_2025_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:46.740770",
+      "saved_at": "2025-11-09T11:17:06.030298",
       "cik": "0001045810",
       "accession_number": "0001045810-25-000209",
       "report_date": "2025-07-27"
@@ -22,7 +22,7 @@
       "raw_file": "raw_10-Q_2025_Q2.htm",
       "parsed_file": "10-Q_2025_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:47.342885",
+      "saved_at": "2025-11-09T11:17:06.838258",
       "cik": "0001045810",
       "accession_number": "0001045810-25-000116",
       "report_date": "2025-04-27"
@@ -35,7 +35,7 @@
       "raw_file": "raw_10-K_2025.htm",
       "parsed_file": "10-K_2025.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:48.356452",
+      "saved_at": "2025-11-09T11:17:08.119333",
       "cik": "0001045810",
       "accession_number": "0001045810-25-000023",
       "report_date": "2025-01-26"
@@ -48,7 +48,7 @@
       "raw_file": "raw_10-Q_2024_Q4.htm",
       "parsed_file": "10-Q_2024_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:49.189549",
+      "saved_at": "2025-11-09T11:17:09.122306",
       "cik": "0001045810",
       "accession_number": "0001045810-24-000316",
       "report_date": "2024-10-27"
@@ -61,7 +61,7 @@
       "raw_file": "raw_10-Q_2024_Q3.htm",
       "parsed_file": "10-Q_2024_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:49.965544",
+      "saved_at": "2025-11-09T11:17:10.116656",
       "cik": "0001045810",
       "accession_number": "0001045810-24-000264",
       "report_date": "2024-07-28"
@@ -74,7 +74,7 @@
       "raw_file": "raw_10-Q_2024_Q2.htm",
       "parsed_file": "10-Q_2024_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:50.696559",
+      "saved_at": "2025-11-09T11:17:10.927746",
       "cik": "0001045810",
       "accession_number": "0001045810-24-000124",
       "report_date": "2024-04-28"
@@ -87,7 +87,7 @@
       "raw_file": "raw_10-K_2024.htm",
       "parsed_file": "10-K_2024.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:51.687482",
+      "saved_at": "2025-11-09T11:17:12.281227",
       "cik": "0001045810",
       "accession_number": "0001045810-24-000029",
       "report_date": "2024-01-28"
@@ -100,7 +100,7 @@
       "raw_file": "raw_10-Q_2023_Q4.htm",
       "parsed_file": "10-Q_2023_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:52:52.495662",
+      "saved_at": "2025-11-09T11:17:13.401323",
       "cik": "0001045810",
       "accession_number": "0001045810-23-000227",
       "report_date": "2023-10-29"

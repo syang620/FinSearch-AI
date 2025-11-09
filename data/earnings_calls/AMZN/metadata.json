@@ -6,104 +6,252 @@
       "quarter": 3,
       "file": "2025_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.759488",
+      "saved_at": "2025-11-09T11:11:17.955180",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2025_Q3.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q3.pdf",
       "file_size": 40135,
-      "character_count": 46080,
-      "word_count": 7785
+      "character_count": 46175,
+      "word_count": 7789,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andrew Jassy": "Andrew Jassy",
+        "Rainier Online": "Rainier Online",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Justin Post": "Justin Post",
+        "Brian Nowak": "Brian Nowak",
+        "Douglas Anmuth": "Douglas Anmuth",
+        "Mark Stephen Mahaney": "Mark Stephen Mahaney",
+        "Game Changer": "Game Changer",
+        "Eric Sheridan": "Eric Sheridan",
+        "John Blackledge": "John Blackledge",
+        "Colin Sebastian": "Colin Sebastian"
+      },
+      "qa_sections": {
+        "qa_start": 0,
+        "presentation_end": 0,
+        "presentation_start": 0
+      },
+      "speaker_count": 12,
+      "has_qa_section": true
     },
     {
       "year": 2025,
       "quarter": 2,
       "file": "2025_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.699330",
+      "saved_at": "2025-11-09T11:11:17.851368",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2025_Q2.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q2.pdf",
       "file_size": 42905,
-      "character_count": 51010,
-      "word_count": 8611
+      "character_count": 51009,
+      "word_count": 8606,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Douglas Till Anmuth": "Douglas Till Anmuth",
+        "Colin Alan Sebastian": "Colin Alan Sebastian",
+        "Brian Thomas Nowak": "Brian Thomas Nowak",
+        "Ronald Victor Josey": "Ronald Victor Josey",
+        "Justin Post": "Justin Post"
+      },
+      "qa_sections": {
+        "qa_start": 0,
+        "presentation_end": 0,
+        "presentation_start": 0
+      },
+      "speaker_count": 6,
+      "has_qa_section": true
     },
     {
       "year": 2025,
       "quarter": 1,
       "file": "2025_Q1.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.633986",
+      "saved_at": "2025-11-09T11:11:17.739036",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2025_Q1.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2025_Q1.pdf",
       "file_size": 41800,
-      "character_count": 48648,
-      "word_count": 8272
+      "character_count": 48759,
+      "word_count": 8277,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andy Jassy": "Andy Jassy",
+        "Amazon Fresh": "Amazon Fresh",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Ross Sandler": "Ross Sandler",
+        "Eric Sheridan": "Eric Sheridan",
+        "Justin Post": "Justin Post",
+        "Doug Anmuth": "Doug Anmuth",
+        "Brian Nowak": "Brian Nowak",
+        "And Brian": "And Brian",
+        "Brent Thill": "Brent Thill"
+      },
+      "qa_sections": {
+        "qa_start": 239,
+        "presentation_end": 239,
+        "presentation_start": 0
+      },
+      "speaker_count": 11,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 4,
       "file": "2024_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.572584",
+      "saved_at": "2025-11-09T11:11:17.632867",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2024_Q4.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q4.pdf",
       "file_size": 40828,
-      "character_count": 47928,
-      "word_count": 8072
+      "character_count": 48012,
+      "word_count": 8075,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andy Jassy": "Andy Jassy",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Mark Mahaney": "Mark Mahaney",
+        "Eric Sheridan": "Eric Sheridan",
+        "Doug Anmuth": "Doug Anmuth",
+        "Brian Nowak": "Brian Nowak",
+        "John Blackledge": "John Blackledge",
+        "Michael Morton": "Michael Morton"
+      },
+      "qa_sections": {
+        "qa_start": 237,
+        "presentation_end": 237,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 3,
       "file": "2024_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.513828",
+      "saved_at": "2025-11-09T11:11:17.527353",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2024_Q3.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q3.pdf",
       "file_size": 40434,
-      "character_count": 46307,
-      "word_count": 7749
+      "character_count": 46413,
+      "word_count": 7754,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andy Jassy": "Andy Jassy",
+        "Amazon Fresh": "Amazon Fresh",
+        "Banking Group": "Banking Group",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Doug Anmuth": "Doug Anmuth",
+        "Ross Sandler": "Ross Sandler",
+        "Brian Nowak": "Brian Nowak",
+        "Eric Sheridan": "Eric Sheridan",
+        "Colin Sebastian": "Colin Sebastian",
+        "Justin Post": "Justin Post"
+      },
+      "qa_sections": {
+        "qa_start": 239,
+        "presentation_end": 239,
+        "presentation_start": 0
+      },
+      "speaker_count": 11,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 2,
       "file": "2024_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.455636",
+      "saved_at": "2025-11-09T11:11:17.421938",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2024_Q2.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q2.pdf",
       "file_size": 40493,
-      "character_count": 46856,
-      "word_count": 7978
+      "character_count": 46975,
+      "word_count": 7984,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andy Jassy": "Andy Jassy",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Eric Sheridan": "Eric Sheridan",
+        "Brian Nowak": "Brian Nowak",
+        "Mark Mahaney": "Mark Mahaney",
+        "Brent Thill": "Brent Thill",
+        "John Blackledge": "John Blackledge",
+        "Doug Anmuth": "Doug Anmuth"
+      },
+      "qa_sections": {
+        "qa_start": 236,
+        "presentation_end": 236,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 1,
       "file": "2024_Q1.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.396620",
+      "saved_at": "2025-11-09T11:11:17.317480",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2024_Q1.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2024_Q1.pdf",
       "file_size": 19569,
-      "character_count": 10868,
-      "word_count": 1845
+      "character_count": 10976,
+      "word_count": 1850,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andrew Jassy": "Andrew Jassy",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Douglas Anmuth": "Douglas Anmuth",
+        "Ross Sandler": "Ross Sandler",
+        "Brian Nowak": "Brian Nowak",
+        "Youssef Squali": "Youssef Squali",
+        "Justin Post": "Justin Post",
+        "Ronald Josey": "Ronald Josey"
+      },
+      "qa_sections": {
+        "qa_start": 0,
+        "presentation_end": 0,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     },
     {
       "year": 2023,
       "quarter": 4,
       "file": "2023_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:09.374074",
+      "saved_at": "2025-11-09T11:11:17.279918",
       "source": "manual_pdf",
       "source_file": "AMZN_FY2023_Q4.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/AMZN/AMZN_FY2023_Q4.pdf",
       "file_size": 43537,
-      "character_count": 52523,
-      "word_count": 8853
+      "character_count": 52640,
+      "word_count": 8859,
+      "speakers": {
+        "Dave Fildes": "Dave Fildes",
+        "Andrew Jassy": "Andrew Jassy",
+        "Brian Olsavsky": "Brian Olsavsky",
+        "Eric Sheridan": "Eric Sheridan",
+        "Brian Nowak": "Brian Nowak",
+        "Doug Anmuth": "Doug Anmuth",
+        "Mark Mahaney": "Mark Mahaney",
+        "Scott Devitt": "Scott Devitt",
+        "Colin Sebastian": "Colin Sebastian"
+      },
+      "qa_sections": {
+        "qa_start": 50423,
+        "presentation_end": 50423,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     }
   ]
 }

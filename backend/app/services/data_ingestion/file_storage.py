@@ -21,12 +21,14 @@ class FileStorage:
         self.base_dir = Path(base_dir)
         self.edgar_dir = self.base_dir / "edgar"
         self.earnings_dir = self.base_dir / "earnings_calls"
+        self.parsed_dir = self.base_dir.parent / "data_parsed"  # New parsed directory
         self._ensure_directories()
 
     def _ensure_directories(self):
         """Create base directories if they don't exist"""
         self.edgar_dir.mkdir(parents=True, exist_ok=True)
         self.earnings_dir.mkdir(parents=True, exist_ok=True)
+        self.parsed_dir.mkdir(parents=True, exist_ok=True)
 
     def _get_company_dir(self, source: str, ticker: str) -> Path:
         """Get directory for a company"""
@@ -280,6 +282,112 @@ class FileStorage:
 
         with open(metadata_file, 'w') as f:
             json.dump(metadata, f, indent=2)
+
+    def save_parsed_edgar(
+        self,
+        ticker: str,
+        doc_id: str,
+        paragraphs: List[Dict],
+        tables: List[Dict],
+        markdown_text: str
+    ) -> Dict[str, str]:
+        """
+        Save parsed EDGAR filing in JSONL and Markdown formats
+
+        Args:
+            ticker: Stock ticker
+            doc_id: Document ID
+            paragraphs: List of paragraph unit dictionaries
+            tables: List of table metadata dictionaries
+            markdown_text: Markdown formatted export
+
+        Returns:
+            Dict with file paths
+        """
+        try:
+            # Create directory structure
+            edgar_dir = self.parsed_dir / ticker / "edgar"
+            edgar_dir.mkdir(parents=True, exist_ok=True)
+
+            # Save JSONL
+            jsonl_file = edgar_dir / f"{doc_id}.jsonl"
+            with open(jsonl_file, 'w', encoding='utf-8') as f:
+                for para in paragraphs:
+                    f.write(json.dumps(para) + '\n')
+
+            # Save Markdown
+            md_file = edgar_dir / f"{doc_id}.md"
+            with open(md_file, 'w', encoding='utf-8') as f:
+                f.write(markdown_text)
+
+            logger.info(
+                f"Saved parsed EDGAR for {ticker}: {len(paragraphs)} paragraphs, "
+                f"{len(tables)} tables"
+            )
+
+            return {
+                "jsonl_file": str(jsonl_file),
+                "md_file": str(md_file),
+                "paragraph_count": len(paragraphs),
+                "table_count": len(tables)
+            }
+
+        except Exception as e:
+            logger.error(f"Error saving parsed EDGAR: {e}")
+            raise
+
+    def save_parsed_transcript(
+        self,
+        ticker: str,
+        year: int,
+        quarter: int,
+        utterances: List[Dict],
+        markdown_text: str
+    ) -> Dict[str, str]:
+        """
+        Save parsed earnings transcript in JSONL and Markdown formats
+
+        Args:
+            ticker: Stock ticker
+            year: Fiscal year
+            quarter: Fiscal quarter
+            utterances: List of utterance unit dictionaries
+            markdown_text: Markdown formatted export
+
+        Returns:
+            Dict with file paths
+        """
+        try:
+            # Create directory structure
+            earnings_dir = self.parsed_dir / ticker / "earnings"
+            earnings_dir.mkdir(parents=True, exist_ok=True)
+
+            # Save JSONL
+            doc_id = f"{year}_Q{quarter}"
+            jsonl_file = earnings_dir / f"{doc_id}.jsonl"
+            with open(jsonl_file, 'w', encoding='utf-8') as f:
+                for utt in utterances:
+                    f.write(json.dumps(utt) + '\n')
+
+            # Save Markdown
+            md_file = earnings_dir / f"{doc_id}.md"
+            with open(md_file, 'w', encoding='utf-8') as f:
+                f.write(markdown_text)
+
+            logger.info(
+                f"Saved parsed transcript for {ticker} {year} Q{quarter}: "
+                f"{len(utterances)} utterances"
+            )
+
+            return {
+                "jsonl_file": str(jsonl_file),
+                "md_file": str(md_file),
+                "utterance_count": len(utterances)
+            }
+
+        except Exception as e:
+            logger.error(f"Error saving parsed transcript: {e}")
+            raise
 
 
 # Singleton instance

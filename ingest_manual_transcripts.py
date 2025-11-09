@@ -83,7 +83,11 @@ def ingest_transcript(pdf_path: Path) -> bool:
                 'source_path': transcript_data['source_path'],
                 'file_size': transcript_data['file_size'],
                 'character_count': len(transcript_text),
-                'word_count': len(transcript_text.split())
+                'word_count': len(transcript_text.split()),
+                'speakers': transcript_data.get('speakers', {}),
+                'qa_sections': transcript_data.get('qa_sections', {}),
+                'speaker_count': len(transcript_data.get('speakers', {})),
+                'has_qa_section': bool(transcript_data.get('qa_sections', {}))
             }
         )
 

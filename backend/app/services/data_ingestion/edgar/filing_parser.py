@@ -20,35 +20,130 @@ class FilingParser:
 
     def clean_html(self, html_content: str) -> str:
         """
-        Remove HTML tags and clean up text
+        Convert HTML to structured text while preserving semantic structure
+
+        Preserves:
+        - Headings (converted to markdown-style)
+        - Lists (converted to bullet/numbered format)
+        - Tables (basic structure preserved)
+        - Paragraph breaks
+
+        Removes:
+        - Boilerplate (SEC headers, page numbers, disclaimers)
+        - Script and style tags
+        - Excessive whitespace
 
         Args:
             html_content: Raw HTML content
 
         Returns:
-            Clean text
+            Structured text with preserved semantic elements
         """
         try:
             # Parse HTML
             soup = BeautifulSoup(html_content, 'html.parser')
 
-            # Remove script and style elements
-            for script in soup(["script", "style"]):
-                script.decompose()
+            # Remove script, style, and navigation elements
+            for element in soup(["script", "style", "nav", "header", "footer"]):
+                element.decompose()
+
+            # Convert structural elements to text with markers
+            self._convert_headings(soup)
+            self._convert_lists(soup)
+            self._convert_tables(soup)
 
             # Get text
-            text = soup.get_text()
+            text = soup.get_text(separator='\n')
 
-            # Clean up whitespace
-            lines = (line.strip() for line in text.splitlines())
-            chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-            text = '\n'.join(chunk for chunk in chunks if chunk)
+            # Remove SEC boilerplate
+            text = self._remove_boilerplate(text)
+
+            # Clean up whitespace while preserving structure
+            text = self._clean_whitespace(text)
 
             return text
 
         except Exception as e:
             logger.error(f"Error cleaning HTML: {e}")
             return html_content
+
+    def _convert_headings(self, soup: BeautifulSoup) -> None:
+        """Convert HTML headings to markdown-style markers"""
+        for level in range(1, 7):  # h1-h6
+            for heading in soup.find_all(f'h{level}'):
+                heading_text = heading.get_text().strip()
+                if heading_text:
+                    # Convert to markdown style
+                    markdown_heading = '\n' + ('#' * level) + ' ' + heading_text + '\n'
+                    heading.replace_with(markdown_heading)
+
+    def _convert_lists(self, soup: BeautifulSoup) -> None:
+        """Convert HTML lists to text lists"""
+        # Ordered lists
+        for ol in soup.find_all('ol'):
+            items = ol.find_all('li', recursive=False)
+            list_text = '\n'.join([f"{i+1}. {item.get_text().strip()}" for i, item in enumerate(items)])
+            ol.replace_with('\n' + list_text + '\n')
+
+        # Unordered lists
+        for ul in soup.find_all('ul'):
+            items = ul.find_all('li', recursive=False)
+            list_text = '\n'.join([f"• {item.get_text().strip()}" for item in items])
+            ul.replace_with('\n' + list_text + '\n')
+
+    def _convert_tables(self, soup: BeautifulSoup) -> None:
+        """Convert HTML tables to text format"""
+        for table in soup.find_all('table'):
+            # Extract table caption if present
+            caption = table.find('caption')
+            caption_text = f"\n[TABLE: {caption.get_text().strip()}]\n" if caption else "\n[TABLE]\n"
+
+            # Extract rows
+            rows = []
+            for tr in table.find_all('tr'):
+                cells = []
+                for cell in tr.find_all(['th', 'td']):
+                    cells.append(cell.get_text().strip())
+                if cells:
+                    rows.append(' | '.join(cells))
+
+            table_text = caption_text + '\n'.join(rows) + '\n[/TABLE]\n'
+            table.replace_with(table_text)
+
+    def _remove_boilerplate(self, text: str) -> str:
+        """Remove SEC filing boilerplate and standard legal text"""
+        # SEC header patterns
+        boilerplate_patterns = [
+            # SEC header information
+            r'UNITED STATES\s+SECURITIES AND EXCHANGE COMMISSION.*?(?=\n\n|\nITEM)',
+            r'Washington,\s*D\.?C\.?\s*20549',
+            r'FORM\s+10-[KQ]\s*\n',
+            # Page numbers and footers
+            r'\n\s*\d+\s*\n',  # Standalone page numbers
+            r'\n\s*Page\s+\d+\s+of\s+\d+\s*\n',
+            # Standard disclaimers (beginning of line)
+            r'^\s*Table of Contents\s*\n',
+            # SEC filing codes
+            r'Commission [Ff]ile [Nn]umber:.*?\n',
+        ]
+
+        for pattern in boilerplate_patterns:
+            text = re.sub(pattern, '\n', text, flags=re.IGNORECASE | re.MULTILINE)
+
+        return text
+
+    def _clean_whitespace(self, text: str) -> str:
+        """Clean whitespace while preserving paragraph structure"""
+        # Remove excessive blank lines (more than 2 consecutive)
+        text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)
+
+        # Remove trailing whitespace from each line
+        lines = [line.rstrip() for line in text.splitlines()]
+
+        # Remove leading/trailing whitespace
+        text = '\n'.join(lines).strip()
+
+        return text
 
     def extract_sections(self, text: str, filing_type: str) -> Dict[str, str]:
         """

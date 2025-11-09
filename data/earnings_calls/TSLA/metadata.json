@@ -6,104 +6,267 @@
       "quarter": 3,
       "file": "2025_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.659204",
+      "saved_at": "2025-11-09T11:11:25.579325",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2025_Q3.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q3.pdf",
       "file_size": 46651,
-      "character_count": 48305,
-      "word_count": 8408
+      "character_count": 48796,
+      "word_count": 8448,
+      "speakers": {
+        "Travis Axelrod": "Travis Axelrod",
+        "Elon Musk": "Elon Musk",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Michael Snyder": "Michael Snyder",
+        "Lars Moravy": "Lars Moravy",
+        "Emmanuel Rosner": "Emmanuel Rosner",
+        "Dan Meir Levy": "Dan Meir Levy",
+        "Colin Langan": "Colin Langan"
+      },
+      "qa_sections": {
+        "qa_start": 83,
+        "presentation_end": 83,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     },
     {
       "year": 2025,
       "quarter": 2,
       "file": "2025_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.590924",
+      "saved_at": "2025-11-09T11:11:25.459707",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2025_Q2.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q2.pdf",
       "file_size": 46032,
-      "character_count": 44472,
-      "word_count": 7961
+      "character_count": 44944,
+      "word_count": 7999,
+      "speakers": {
+        "Travis Axelrod": "Travis Axelrod",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Lars Moravy": "Lars Moravy",
+        "Chief Designer": "Chief Designer",
+        "Michael Snyder": "Michael Snyder",
+        "Emmanuel Rosner": "Emmanuel Rosner",
+        "So Elon": "So Elon",
+        "Adam Michael Jonas": "Adam Michael Jonas",
+        "Dan Meir Levy": "Dan Meir Levy",
+        "Mark Trevor Delaney": "Mark Trevor Delaney",
+        "William Stein": "William Stein"
+      },
+      "qa_sections": {
+        "qa_start": 84,
+        "presentation_end": 84,
+        "presentation_start": 0
+      },
+      "speaker_count": 12,
+      "has_qa_section": true
     },
     {
       "year": 2025,
       "quarter": 1,
       "file": "2025_Q1.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.523847",
+      "saved_at": "2025-11-09T11:11:25.302803",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2025_Q1.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2025_Q1.pdf",
       "file_size": 62889,
-      "character_count": 66849,
-      "word_count": 11913
+      "character_count": 68200,
+      "word_count": 12031,
+      "speakers": {
+        "Elon Musk": "Elon Musk",
+        "Travis Axelrod": "Travis Axelrod",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Lars Moravy": "Lars Moravy",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Karn Budhiraj": "Karn Budhiraj",
+        "Pierre Ferragu": "Pierre Ferragu",
+        "Emmanuel Rosner": "Emmanuel Rosner",
+        "Edison Yu": "Edison Yu",
+        "George Gianarikas": "George Gianarikas",
+        "Colin Langan": "Colin Langan",
+        "Adam Jonas": "Adam Jonas"
+      },
+      "qa_sections": {
+        "qa_start": 77,
+        "presentation_end": 77,
+        "presentation_start": 0
+      },
+      "speaker_count": 13,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 4,
       "file": "2024_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.418378",
+      "saved_at": "2025-11-09T11:11:25.108817",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2024_Q4.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q4.pdf",
       "file_size": 51210,
-      "character_count": 53362,
-      "word_count": 9548
+      "character_count": 54128,
+      "word_count": 9613,
+      "speakers": {
+        "Elon Musk": "Elon Musk",
+        "Travis Axelrod": "Travis Axelrod",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Lars Moravy": "Lars Moravy",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Daniel Roeska": "Daniel Roeska",
+        "Adam Jonas": "Adam Jonas",
+        "Pierre Ferragu": "Pierre Ferragu",
+        "Dan Levy": "Dan Levy"
+      },
+      "qa_sections": {
+        "qa_start": 77,
+        "presentation_end": 77,
+        "presentation_start": 0
+      },
+      "speaker_count": 10,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 3,
       "file": "2024_Q3.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.337991",
+      "saved_at": "2025-11-09T11:11:24.962723",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2024_Q3.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q3.pdf",
       "file_size": 53235,
-      "character_count": 54757,
-      "word_count": 9737
+      "character_count": 55864,
+      "word_count": 9833,
+      "speakers": {
+        "Travis Axelrod": "Travis Axelrod",
+        "Elon Musk": "Elon Musk",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Smart Summon": "Smart Summon",
+        "Lars Moravy": "Lars Moravy",
+        "Ferragu Pierre": "Ferragu Pierre",
+        "Adam Jonas": "Adam Jonas"
+      },
+      "qa_sections": {
+        "qa_start": 83,
+        "presentation_end": 83,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 2,
       "file": "2024_Q2.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.248462",
+      "saved_at": "2025-11-09T11:11:24.803239",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2024_Q2.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q2.pdf",
       "file_size": 48574,
-      "character_count": 47174,
-      "word_count": 8458
+      "character_count": 48020,
+      "word_count": 8530,
+      "speakers": {
+        "Travis Axelrod": "Travis Axelrod",
+        "Elon Musk": "Elon Musk",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Lars Moravy": "Lars Moravy",
+        "Will Stein": "Will Stein",
+        "Ben Kallo": "Ben Kallo",
+        "Alex Potter": "Alex Potter",
+        "Dan Levy": "Dan Levy",
+        "George Gianarikas": "George Gianarikas",
+        "Ferragu Pierre": "Ferragu Pierre",
+        "Colin Rusch": "Colin Rusch",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Colin Langan": "Colin Langan"
+      },
+      "qa_sections": {
+        "qa_start": 83,
+        "presentation_end": 83,
+        "presentation_start": 0
+      },
+      "speaker_count": 13,
+      "has_qa_section": true
     },
     {
       "year": 2024,
       "quarter": 1,
       "file": "2024_Q1.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.175898",
+      "saved_at": "2025-11-09T11:11:24.668017",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2024_Q1.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2024_Q1.pdf",
       "file_size": 58218,
-      "character_count": 56633,
-      "word_count": 10082
+      "character_count": 58314,
+      "word_count": 10230,
+      "speakers": {
+        "Martin Viecha": "Martin Viecha",
+        "Elon Musk": "Elon Musk",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Lars Moravy": "Lars Moravy",
+        "Ashok Elluswamy": "Ashok Elluswamy",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Tony Sacconaghi": "Tony Sacconaghi",
+        "Adam Jonas": "Adam Jonas",
+        "Alex Potter": "Alex Potter",
+        "Mark Delaney": "Mark Delaney",
+        "Unidentified Analyst": "Unidentified Analyst",
+        "Colin Rusch": "Colin Rusch",
+        "Shreyas Patil": "Shreyas Patil",
+        "Reduction Act": "Reduction Act"
+      },
+      "qa_sections": {
+        "qa_start": 41,
+        "presentation_end": 41,
+        "presentation_start": 0
+      },
+      "speaker_count": 14,
+      "has_qa_section": true
     },
     {
       "year": 2023,
       "quarter": 4,
       "file": "2023_Q4.txt",
       "rag_ingested": false,
-      "saved_at": "2025-11-08T15:25:13.066531",
+      "saved_at": "2025-11-09T11:11:24.464871",
       "source": "manual_pdf",
       "source_file": "TSLA_FY2023_Q4.pdf",
       "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/TSLA/TSLA_FY2023_Q4.pdf",
       "file_size": 52402,
-      "character_count": 49512,
-      "word_count": 8708
+      "character_count": 50905,
+      "word_count": 8830,
+      "speakers": {
+        "Martin Viecha": "Martin Viecha",
+        "Elon Musk": "Elon Musk",
+        "Vaibhav Taneja": "Vaibhav Taneja",
+        "Karn Budhiraj": "Karn Budhiraj",
+        "Unidentified Company Representative": "Unidentified Company Representative",
+        "Pierre Ferragu": "Pierre Ferragu",
+        "Lars Moravy": "Lars Moravy",
+        "Andrew Baglino": "Andrew Baglino",
+        "Adam Jonas": "Adam Jonas",
+        "Dan Levy": "Dan Levy",
+        "Colin Langan": "Colin Langan"
+      },
+      "qa_sections": {
+        "qa_start": 83,
+        "presentation_end": 83,
+        "presentation_start": 0
+      },
+      "speaker_count": 11,
+      "has_qa_section": true
     }
   ]
 }

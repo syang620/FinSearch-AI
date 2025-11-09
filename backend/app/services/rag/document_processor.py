@@ -4,13 +4,14 @@ from docx import Document
 import pandas as pd
 from pathlib import Path
 import logging
+import re
 from app.core.config import settings
 
 logger = logging.getLogger(__name__)
 
 
 class DocumentProcessor:
-    """Process and chunk documents for RAG"""
+    """Process and chunk documents for RAG with section-aware and semantic chunking"""
 
     def __init__(self, chunk_size: int = None, chunk_overlap: int = None):
         self.chunk_size = chunk_size or settings.CHUNK_SIZE
@@ -90,48 +91,223 @@ class DocumentProcessor:
 
     def chunk_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
         """
-        Split text into chunks with overlap
+        Split text into chunks using semantic and section-aware chunking
 
         Args:
             text: Input text to chunk
             metadata: Optional metadata to attach to each chunk
+                     Can include 'document_type' and 'sections' for section-aware chunking
 
         Returns:
             List of chunk dictionaries with text and metadata
         """
+        metadata = metadata or {}
+        document_type = metadata.get('document_type', '')
+
+        # Use section-aware chunking for EDGAR filings
+        if document_type in ['10-K', '10-Q'] and 'sections' in metadata:
+            return self._chunk_by_sections(text, metadata)
+
+        # Use semantic chunking for all other documents
+        return self._chunk_semantically(text, metadata)
+
+    def _chunk_by_sections(self, text: str, metadata: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """
+        Chunk EDGAR filings by detected sections for better semantic coherence
+
+        Args:
+            text: Filing text
+            metadata: Metadata including sections information
+
+        Returns:
+            List of chunks based on sections
+        """
         chunks = []
-        start = 0
-        text_length = len(text)
+        sections = metadata.get('sections', {})
 
-        while start < text_length:
-            # Calculate end position
-            end = start + self.chunk_size
+        if not sections:
+            # Fallback to semantic chunking if no sections
+            return self._chunk_semantically(text, metadata)
 
-            # Extract chunk
-            chunk = text[start:end]
+        for section_name, section_text in sections.items():
+            # Create section-specific metadata
+            section_metadata = metadata.copy()
+            section_metadata['section_name'] = section_name
+            section_metadata['section_type'] = self._categorize_section(section_name)
 
-            # Create chunk metadata
-            chunk_metadata = metadata.copy() if metadata else {}
+            # Chunk the section if it's too large
+            if len(section_text) > self.chunk_size:
+                section_chunks = self._chunk_semantically(section_text, section_metadata)
+                chunks.extend(section_chunks)
+            else:
+                # Keep small sections as single chunks
+                chunk_metadata = section_metadata.copy()
+                chunk_metadata.update({
+                    "chunk_index": len(chunks),
+                    "start_char": 0,
+                    "end_char": len(section_text),
+                })
+                chunks.append({
+                    "text": section_text,
+                    "metadata": chunk_metadata
+                })
+
+        logger.info(f"Created {len(chunks)} section-aware chunks from {len(sections)} sections")
+        return chunks
+
+    def _chunk_semantically(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
+        """
+        Chunk text semantically by respecting sentence and paragraph boundaries
+
+        Args:
+            text: Input text
+            metadata: Optional metadata
+
+        Returns:
+            List of semantic chunks
+        """
+        chunks = []
+        metadata = metadata or {}
+
+        # Split by paragraphs first
+        paragraphs = re.split(r'\n\n+', text)
+
+        current_chunk = ""
+        current_start = 0
+
+        for para in paragraphs:
+            para = para.strip()
+            if not para:
+                continue
+
+            # If adding this paragraph exceeds chunk size
+            if len(current_chunk) + len(para) + 2 > self.chunk_size:
+                # Save current chunk if it has content
+                if current_chunk:
+                    chunk_metadata = metadata.copy()
+                    chunk_metadata.update({
+                        "chunk_index": len(chunks),
+                        "start_char": current_start,
+                        "end_char": current_start + len(current_chunk),
+                    })
+                    chunks.append({
+                        "text": current_chunk.strip(),
+                        "metadata": chunk_metadata
+                    })
+
+                    # Start new chunk with overlap (last paragraph)
+                    current_start += len(current_chunk) - self.chunk_overlap
+                    current_chunk = para + "\n\n"
+                else:
+                    # Paragraph itself is too large, split by sentences
+                    sentence_chunks = self._split_long_paragraph(para, metadata, len(chunks), current_start)
+                    chunks.extend(sentence_chunks)
+                    current_start += sum(len(c["text"]) for c in sentence_chunks)
+                    current_chunk = ""
+            else:
+                # Add paragraph to current chunk
+                current_chunk += para + "\n\n"
+
+        # Add final chunk
+        if current_chunk.strip():
+            chunk_metadata = metadata.copy()
             chunk_metadata.update({
                 "chunk_index": len(chunks),
-                "start_char": start,
-                "end_char": min(end, text_length),
+                "start_char": current_start,
+                "end_char": current_start + len(current_chunk),
             })
-
             chunks.append({
-                "text": chunk,
+                "text": current_chunk.strip(),
                 "metadata": chunk_metadata
             })
 
-            # Move to next chunk with overlap
-            start = end - self.chunk_overlap
-
-            # Prevent infinite loop
-            if start >= text_length or self.chunk_overlap >= self.chunk_size:
-                break
-
-        logger.info(f"Created {len(chunks)} chunks from text of length {text_length}")
+        logger.info(f"Created {len(chunks)} semantic chunks from text of length {len(text)}")
         return chunks
+
+    def _split_long_paragraph(self, paragraph: str, metadata: Dict[str, Any],
+                             start_chunk_idx: int, start_char: int) -> List[Dict[str, Any]]:
+        """
+        Split a long paragraph by sentences when it exceeds chunk size
+
+        Args:
+            paragraph: Long paragraph text
+            metadata: Base metadata
+            start_chunk_idx: Starting chunk index
+            start_char: Starting character position
+
+        Returns:
+            List of chunks from the paragraph
+        """
+        chunks = []
+
+        # Split into sentences (simple regex)
+        sentences = re.split(r'(?<=[.!?])\s+', paragraph)
+
+        current_chunk = ""
+        current_start = start_char
+
+        for sentence in sentences:
+            if len(current_chunk) + len(sentence) + 1 > self.chunk_size:
+                if current_chunk:
+                    chunk_metadata = metadata.copy()
+                    chunk_metadata.update({
+                        "chunk_index": start_chunk_idx + len(chunks),
+                        "start_char": current_start,
+                        "end_char": current_start + len(current_chunk),
+                    })
+                    chunks.append({
+                        "text": current_chunk.strip(),
+                        "metadata": chunk_metadata
+                    })
+                    current_start += len(current_chunk)
+                    current_chunk = sentence + " "
+                else:
+                    # Single sentence is too long, force split
+                    chunk_metadata = metadata.copy()
+                    chunk_metadata.update({
+                        "chunk_index": start_chunk_idx + len(chunks),
+                        "start_char": current_start,
+                        "end_char": current_start + self.chunk_size,
+                    })
+                    chunks.append({
+                        "text": sentence[:self.chunk_size],
+                        "metadata": chunk_metadata
+                    })
+                    current_start += self.chunk_size
+                    current_chunk = sentence[self.chunk_size:] + " " if len(sentence) > self.chunk_size else ""
+            else:
+                current_chunk += sentence + " "
+
+        # Add remaining text
+        if current_chunk.strip():
+            chunk_metadata = metadata.copy()
+            chunk_metadata.update({
+                "chunk_index": start_chunk_idx + len(chunks),
+                "start_char": current_start,
+                "end_char": current_start + len(current_chunk),
+            })
+            chunks.append({
+                "text": current_chunk.strip(),
+                "metadata": chunk_metadata
+            })
+
+        return chunks
+
+    def _categorize_section(self, section_name: str) -> str:
+        """Categorize EDGAR section type for metadata"""
+        section_types = {
+            'business': 'business_overview',
+            'risk_factors': 'risk_disclosure',
+            'md_and_a': 'management_discussion',
+            'financial_statements': 'financials',
+            'financial_data': 'financials',
+            'financial_information': 'financials',
+            'legal_proceedings': 'legal',
+            'properties': 'assets',
+            'controls': 'governance',
+            'quantitative_disclosures': 'risk_disclosure',
+        }
+        return section_types.get(section_name, 'other')
 
     def process_and_chunk_file(
         self,
