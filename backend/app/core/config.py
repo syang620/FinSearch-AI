@@ -18,9 +18,14 @@ class Settings(BaseSettings):
     LLM_TEMPERATURE: float = 0.7
     LLM_DEVICE: str = "cpu"  # Change to "cuda" if GPU available
 
+    # LLM Backend Selection
+    LLM_BACKEND: str = "ollama"  # Options: "transformers" (cloud/HuggingFace) or "ollama" (local)
+    OLLAMA_MODEL: str = "qwen2.5:7b"  # Default Ollama model
+    OLLAMA_HOST: str = "http://localhost:11434"  # Ollama server URL
+
     # Embedding settings
-    EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
-    EMBEDDING_DIMENSION: int = 384
+    EMBEDDING_MODEL: str = "BAAI/bge-base-en-v1.5"
+    EMBEDDING_DIMENSION: int = 768
 
     # ChromaDB settings
     CHROMA_PERSIST_DIRECTORY: str = "./data/chroma_db"
@@ -46,6 +51,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         case_sensitive = True
+        extra = "ignore"  # Allow extra fields in .env file
 
 
 settings = Settings()

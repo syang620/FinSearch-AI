@@ -45,6 +45,9 @@ python-dotenv==1.0.0
 httpx==0.25.2
 aiofiles==23.2.1
 
+# Local LLM Support
+ollama==0.4.4  # For Ollama integration
+
 # Development and Testing
 pytest==7.4.3
 pytest-asyncio==0.21.1

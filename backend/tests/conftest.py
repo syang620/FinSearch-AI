@@ -156,3 +156,69 @@ def cleanup_test_data():
     """Cleanup any test data after tests"""
     yield
     # Cleanup happens automatically with tmp_path
+
+
+# ============================================================================
+# EMBEDDING TEST FIXTURES
+# ============================================================================
+
+@pytest.fixture
+def sample_financial_texts_for_embedding():
+    """Sample financial texts for embedding testing"""
+    return {
+        'revenue_growth': "The company reported revenue growth of 15% year-over-year",
+        'revenue_decline': "Sales declined by 10% compared to last quarter",
+        'profit_margin': "Operating profit margins expanded to 25%",
+        'ebitda': "EBITDA increased significantly due to cost optimization",
+        'risk_disclosure': "The company faces significant market volatility risks",
+    }
+
+
+@pytest.fixture
+def pre_computed_embeddings():
+    """Pre-computed embeddings for testing (mock data)"""
+    # These would be actual BGE embeddings in real tests
+    import numpy as np
+    return {
+        'revenue_growth': np.random.rand(768).tolist(),
+        'profit_margin': np.random.rand(768).tolist(),
+    }
+
+
+@pytest.fixture
+def mock_embedding_service():
+    """Mock embedding service for testing without loading model"""
+    from unittest.mock import MagicMock
+    import numpy as np
+
+    mock_service = MagicMock()
+
+    # Mock embed_text to return 768-dimensional vector
+    def mock_embed_text(text):
+        np.random.seed(hash(text) % 1000)  # Deterministic based on text
+        return np.random.rand(768).tolist()
+
+    # Mock embed_texts to return list of 768-dimensional vectors
+    def mock_embed_texts(texts):
+        return [mock_embed_text(text) for text in texts]
+
+    mock_service.embed_text = mock_embed_text
+    mock_service.embed_texts = mock_embed_texts
+
+    return mock_service
+
+
+@pytest.fixture
+def temp_chroma_db(tmp_path):
+    """Temporary ChromaDB for testing"""
+    import chromadb
+    chroma_path = tmp_path / "test_chroma_db"
+    chroma_path.mkdir()
+
+    client = chromadb.PersistentClient(path=str(chroma_path))
+    collection = client.create_collection(
+        name="test_financial_docs",
+        metadata={"hnsw:space": "cosine"}
+    )
+
+    return collection
