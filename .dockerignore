@@ -1,25 +1,66 @@
-# Backend
-backend/__pycache__
-backend/**/__pycache__
-backend/.env
-backend/data/
-backend/.pytest_cache
-
-# Frontend
-frontend/node_modules
-frontend/dist
-frontend/.env
-
 # Git
 .git
 .gitignore
 
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# Virtual environments
+venv/
+env/
+ENV/
+
 # IDE
-.vscode
-.idea
+.vscode/
+.idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Project specific
+_archive_old_structure/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Data (will be mounted as volume)
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Models (will be mounted as volume)
+models/artifacts/*
+models/checkpoints/*
+
+# Experiments (will be mounted as volume)
+experiments/runs/*
+experiments/results/*
+
+# Reports (will be mounted as volume)
+reports/figures/*
+reports/tables/*
+
+# Environment
+.env
+.env.local
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Documentation build
+docs/_build/

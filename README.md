@@ -261,6 +261,17 @@ Document types:
 - 10-Q Quarterly Reports
 - Earnings Call Transcripts
 
+## 📚 Documentation
+
+Complete documentation is available in the [`docs/`](./docs/) directory:
+
+- **[Guides](./docs/guides/)** - Setup and usage guides
+- **[Technical](./docs/technical/)** - Data dictionary and technical specs
+- **[Migration](./docs/migration/)** - Restructuring documentation
+- **[Experiments](./docs/experiments/)** - Experiment results and analysis
+
+See the [Documentation Index](./docs/README.md) for a complete list.
+
 ## 🤝 Contributing
 
 We welcome contributions! The simplified structure makes it easy to:

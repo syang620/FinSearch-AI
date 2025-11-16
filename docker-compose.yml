@@ -1,38 +1,41 @@
 version: '3.8'
 
 services:
-  backend:
+  finsearch:
     build:
-      context: ./backend
+      context: .
       dockerfile: Dockerfile
-    container_name: finsearch-backend
+    container_name: finsearch-ai
     ports:
-      - "8000:8000"
+      - "8000:8000"     # API server
+      - "8888:8888"     # Jupyter notebook (optional)
     volumes:
-      - ./backend:/app
-      - backend-data:/app/data
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./notebooks:/app/notebooks
+      - ./experiments:/app/experiments
+      - ./reports:/app/reports
     environment:
       - PYTHONUNBUFFERED=1
-      - LLM_DEVICE=cpu
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      - FINSEARCH_ENVIRONMENT=docker
+    command: python scripts/serve_api.py --host 0.0.0.0 --port 8000
     restart: unless-stopped
 
-  frontend:
+  # Optional: Jupyter notebook server for experimentation
+  jupyter:
     build:
-      context: ./frontend
+      context: .
       dockerfile: Dockerfile
-    container_name: finsearch-frontend
+    container_name: finsearch-jupyter
     ports:
-      - "5173:5173"
+      - "8888:8888"
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
+      - ./:/app
     environment:
-      - VITE_API_BASE_URL=http://localhost:8000/api/v1
-    command: npm run dev
-    depends_on:
-      - backend
-    restart: unless-stopped
+      - PYTHONUNBUFFERED=1
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+    profiles:
+      - development
 
 volumes:
-  backend-data:
+  finsearch-data:
