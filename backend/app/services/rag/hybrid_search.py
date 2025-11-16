@@ -106,7 +106,18 @@ class HybridSearchService:
     ) -> Dict[str, List]:
         """Run BM25 keyword search"""
         try:
-            results = bm25_index.search(query, n_results, where)
+            # Map 'company' filter to 'ticker' for BM25
+            bm25_where = None
+            if where:
+                bm25_where = {}
+                for key, value in where.items():
+                    # Map company field to ticker for BM25
+                    if key == 'company':
+                        bm25_where['ticker'] = value
+                    else:
+                        bm25_where[key] = value
+
+            results = bm25_index.search(query, n_results, bm25_where)
             logger.debug(f"BM25 returned {len(results['ids'][0]) if results['ids'] else 0} results")
             return results
         except Exception as e:
@@ -233,11 +244,16 @@ class HybridSearchService:
         if debug:
             results['debug_ranking'] = [debug_info[chunk_id] for chunk_id in ids]
 
-        logger.info(
-            f"RRF fusion: {len(rrf_scores)} unique chunks → {len(ids)} results "
-            f"(BM25: {len([k for k in rrf_scores if 'bm25_rank' in debug_info.get(k, {})])}, "
-            f"Dense: {len([k for k in rrf_scores if 'dense_rank' in debug_info.get(k, {})])})"
-        )
+        if debug and debug_info:
+            logger.info(
+                f"RRF fusion: {len(rrf_scores)} unique chunks → {len(ids)} results "
+                f"(BM25: {len([k for k in rrf_scores if 'bm25_rank' in debug_info.get(k, {})])}, "
+                f"Dense: {len([k for k in rrf_scores if 'dense_rank' in debug_info.get(k, {})])})"
+            )
+        else:
+            logger.info(
+                f"RRF fusion: {len(rrf_scores)} unique chunks → {len(ids)} results"
+            )
 
         return results
 

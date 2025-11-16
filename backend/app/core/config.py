@@ -15,12 +15,12 @@ class Settings(BaseSettings):
     # LLM settings
     LLM_MODEL_NAME: str = "google/flan-t5-base"  # Can switch to "mistralai/Mistral-7B-Instruct-v0.1"
     LLM_MAX_LENGTH: int = 512
-    LLM_TEMPERATURE: float = 0.7
+    LLM_TEMPERATURE: float = 0.1  # Very low temperature for highly deterministic financial responses
     LLM_DEVICE: str = "cpu"  # Change to "cuda" if GPU available
 
     # LLM Backend Selection
     LLM_BACKEND: str = "ollama"  # Options: "transformers" (cloud/HuggingFace) or "ollama" (local)
-    OLLAMA_MODEL: str = "qwen2.5:7b"  # Default Ollama model
+    OLLAMA_MODEL: str = "qwen2.5:3b-instruct"  # Balanced model for 8GB RAM with better quality
     OLLAMA_HOST: str = "http://localhost:11434"  # Ollama server URL
 
     # Embedding settings
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     EMBEDDING_DIMENSION: int = 768
 
     # ChromaDB settings
-    CHROMA_PERSIST_DIRECTORY: str = "./data/chroma_db"
+    CHROMA_PERSIST_DIRECTORY: str = "../data/chroma_db"
     CHROMA_COLLECTION_NAME: str = "financial_documents"
 
     # Sentiment Analysis settings
@@ -47,6 +47,12 @@ class Settings(BaseSettings):
     DCF_EMAIL: Optional[str] = None
     DCF_PASSWORD: Optional[str] = None
     EDGAR_USER_EMAIL: Optional[str] = None
+
+    # Reranker settings
+    RERANKER_ENABLED: bool = True
+    RERANKER_MODEL: str = "qwen2.5:0.5b"
+    RERANKER_CANDIDATE_POOL: int = 20
+    RERANKER_TOP_K: int = 5
 
     class Config:
         env_file = ".env"

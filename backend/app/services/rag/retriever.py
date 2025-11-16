@@ -1,6 +1,9 @@
 from typing import List, Dict, Any, Optional
 from app.services.rag.vector_store import vector_store
 from app.services.rag.document_processor import document_processor
+from app.services.rag.hybrid_search import hybrid_search
+from app.services.rag.reranker_service import reranker
+from app.core.config import settings
 import logging
 
 logger = logging.getLogger(__name__)
@@ -12,6 +15,7 @@ class RAGRetriever:
     def __init__(self):
         self.vector_store = vector_store
         self.document_processor = document_processor
+        self.hybrid_search = hybrid_search
 
     def ingest_document(
         self,
@@ -81,22 +85,51 @@ class RAGRetriever:
             if company_filter:
                 where_filter = {"company": company_filter}
 
-            # Search vector store
-            results = self.vector_store.search(
+            # Determine how many candidates to retrieve for reranking
+            if settings.RERANKER_ENABLED:
+                # Get more candidates for reranking
+                initial_n_results = min(settings.RERANKER_CANDIDATE_POOL, n_results * 4)
+            else:
+                initial_n_results = n_results
+
+            # Use hybrid search (BM25 + Vector) for initial retrieval
+            results = self.hybrid_search.search(
                 query=query,
-                n_results=n_results,
-                where=where_filter
+                n_results=initial_n_results,
+                where=where_filter,
+                bm25_weight=0.5,  # Equal weights for BM25 and vector search
+                dense_weight=0.5
             )
 
-            # Format results
-            contexts = []
+            # Format initial results
+            candidates = []
             if results["documents"] and len(results["documents"]) > 0:
                 for i, doc in enumerate(results["documents"][0]):
-                    contexts.append({
+                    # Handle both 'scores' (from hybrid) and 'distances' (from vector) fields
+                    score_or_distance = 0
+                    if "scores" in results and results["scores"]:
+                        score_or_distance = results["scores"][0][i] if i < len(results["scores"][0]) else 0
+                    elif "distances" in results and results["distances"]:
+                        score_or_distance = results["distances"][0][i] if i < len(results["distances"][0]) else 0
+
+                    candidates.append({
                         "text": doc,
                         "metadata": results["metadatas"][0][i] if results["metadatas"] else {},
-                        "distance": results["distances"][0][i] if results["distances"] else 0,
+                        "distance": score_or_distance,
                     })
+
+            # Apply reranking if enabled
+            if settings.RERANKER_ENABLED and candidates:
+                logger.info(f"Reranking {len(candidates)} candidates...")
+                contexts = reranker.rerank(
+                    query=query,
+                    candidates=candidates,
+                    top_k=n_results
+                )
+                logger.info(f"Reranked to top {len(contexts)} results")
+            else:
+                # Use candidates as-is, limited to n_results
+                contexts = candidates[:n_results]
 
             logger.info(f"Retrieved {len(contexts)} contexts for query")
 

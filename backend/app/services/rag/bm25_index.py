@@ -196,9 +196,17 @@ class BM25IndexService:
             """
 
             # Escape special characters in FTS5 query
-            # Replace apostrophes with spaces to avoid syntax errors
-            query_escaped = query.replace("'", " ")
-            params = [query_escaped]
+            # Replace apostrophes and commas with spaces to avoid syntax errors
+            query_escaped = query.replace("'", " ").replace(",", " ")
+            # Wrap each word in quotes for FTS5 to handle properly
+            # This prevents syntax errors with special characters
+            words = query_escaped.split()
+            if words:
+                # Use FTS5 phrase query for better results
+                query_formatted = ' '.join([f'"{word}"' for word in words])
+            else:
+                query_formatted = '""'
+            params = [query_formatted]
 
             # Add filters if provided
             if where:
