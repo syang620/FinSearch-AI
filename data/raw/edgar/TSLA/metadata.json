@@ -1,0 +1,109 @@
+{
+  "ticker": "TSLA",
+  "filings": [
+    {
+      "type": "10-Q",
+      "date": "2025-10-23",
+      "year": "2025",
+      "quarter": 4,
+      "raw_file": "raw_10-Q_2025_Q4.htm",
+      "parsed_file": "10-Q_2025_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:33.640292",
+      "cik": "0001318605",
+      "accession_number": "0001628280-25-045968",
+      "report_date": "2025-09-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2025-07-24",
+      "year": "2025",
+      "quarter": 3,
+      "raw_file": "raw_10-Q_2025_Q3.htm",
+      "parsed_file": "10-Q_2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:34.631380",
+      "cik": "0001318605",
+      "accession_number": "0001628280-25-035806",
+      "report_date": "2025-06-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2025-04-23",
+      "year": "2025",
+      "quarter": 2,
+      "raw_file": "raw_10-Q_2025_Q2.htm",
+      "parsed_file": "10-Q_2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:35.480283",
+      "cik": "0001318605",
+      "accession_number": "0001628280-25-018911",
+      "report_date": "2025-03-31"
+    },
+    {
+      "type": "10-K",
+      "date": "2025-01-30",
+      "year": "2025",
+      "quarter": null,
+      "raw_file": "raw_10-K_2025.htm",
+      "parsed_file": "10-K_2025.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:37.082602",
+      "cik": "0001318605",
+      "accession_number": "0001628280-25-003063",
+      "report_date": "2024-12-31"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-10-24",
+      "year": "2024",
+      "quarter": 4,
+      "raw_file": "raw_10-Q_2024_Q4.htm",
+      "parsed_file": "10-Q_2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:38.179961",
+      "cik": "0001318605",
+      "accession_number": "0001628280-24-043486",
+      "report_date": "2024-09-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-07-24",
+      "year": "2024",
+      "quarter": 3,
+      "raw_file": "raw_10-Q_2024_Q3.htm",
+      "parsed_file": "10-Q_2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:39.251018",
+      "cik": "0001318605",
+      "accession_number": "0001628280-24-032662",
+      "report_date": "2024-06-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-04-24",
+      "year": "2024",
+      "quarter": 2,
+      "raw_file": "raw_10-Q_2024_Q2.htm",
+      "parsed_file": "10-Q_2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:40.191931",
+      "cik": "0001318605",
+      "accession_number": "0001628280-24-017503",
+      "report_date": "2024-03-31"
+    },
+    {
+      "type": "10-K",
+      "date": "2024-01-29",
+      "year": "2024",
+      "quarter": null,
+      "raw_file": "raw_10-K_2024.htm",
+      "parsed_file": "10-K_2024.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:41.874159",
+      "cik": "0001318605",
+      "accession_number": "0001628280-24-002390",
+      "report_date": "2023-12-31"
+    }
+  ]
+}

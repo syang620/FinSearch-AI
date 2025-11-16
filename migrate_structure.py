@@ -297,12 +297,14 @@ logging:
         """Generate a report of all migration actions"""
         report_path = self.root / "MIGRATION_REPORT.md"
 
+        import datetime
+
         report_content = f"""# Migration Report
 
 ## Summary
 - Total actions: {len(self.actions_log)}
 - Mode: {'DRY RUN' if self.dry_run else 'EXECUTED'}
-- Date: {import.datetime.datetime.now().isoformat()}
+- Date: {datetime.datetime.now().isoformat()}
 
 ## Actions Performed
 
@@ -386,6 +388,11 @@ def main():
         default=Path.cwd(),
         help="Root path of the project (default: current directory)"
     )
+    parser.add_argument(
+        "--auto-confirm",
+        action="store_true",
+        help="Skip confirmation prompts"
+    )
 
     args = parser.parse_args()
 
@@ -399,18 +406,28 @@ def main():
         print("DRY RUN MODE - No files will be modified")
         print("Add --execute flag to perform actual migration")
         print("=" * 50)
-        response = input("\nContinue with dry run? (y/n): ")
-        if response.lower() != 'y':
-            print("Migration cancelled.")
-            return
+        if not args.auto_confirm:
+            try:
+                response = input("\nContinue with dry run? (y/n): ")
+                if response.lower() != 'y':
+                    print("Migration cancelled.")
+                    return
+            except EOFError:
+                print("\nRunning in non-interactive mode, proceeding with dry run...")
     else:
         print("=" * 50)
         print("EXECUTE MODE - Files will be modified!")
         print("=" * 50)
-        response = input("\nAre you sure you want to proceed? (yes/no): ")
-        if response.lower() != 'yes':
-            print("Migration cancelled.")
-            return
+        if not args.auto_confirm:
+            try:
+                response = input("\nAre you sure you want to proceed? (yes/no): ")
+                if response.lower() != 'yes':
+                    print("Migration cancelled.")
+                    return
+            except EOFError:
+                print("\nError: Cannot run in execute mode without confirmation.")
+                print("Use --auto-confirm flag to bypass confirmation.")
+                return
 
     migrator.run_migration()
 
@@ -422,5 +439,4 @@ def main():
         print("Migration complete! Check MIGRATION_REPORT.md for details.")
 
 if __name__ == "__main__":
-    import datetime
     main()

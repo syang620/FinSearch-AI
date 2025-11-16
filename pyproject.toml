@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finsearch-ai"
+version = "2.0.0"
+description = "Financial document search and analysis with RAG"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+
+dependencies = [
+    # Core
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "hydra-core>=1.3.0",
+
+    # ML/NLP
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "sentence-transformers>=2.2.0",
+    "chromadb>=0.4.0",
+    "langchain>=0.1.0",
+    "openai>=1.0.0",
+    "tiktoken>=0.5.0",
+
+    # Data processing
+    "beautifulsoup4>=4.12.0",
+    "pypdf>=3.0.0",
+    "rank-bm25>=0.2.2",
+
+    # API (optional)
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+
+    # Evaluation
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.4.0",
+    "ipykernel>=6.25.0",
+    "jupyter>=1.0.0",
+    "nbformat>=5.9.0",
+]
+
+experiment = [
+    "mlflow>=2.5.0",
+    "wandb>=0.15.0",
+    "optuna>=3.3.0",
+]
+
+[project.scripts]
+finsearch-prepare = "scripts.prepare_data:main"
+finsearch-evaluate = "scripts.evaluate_rag:main"
+finsearch-serve = "scripts.serve_api:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/finsearch --cov-report=term-missing"

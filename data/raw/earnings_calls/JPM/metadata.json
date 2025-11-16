@@ -1,0 +1,271 @@
+{
+  "ticker": "JPM",
+  "earnings_calls": [
+    {
+      "year": 2025,
+      "quarter": 3,
+      "file": "2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.924601",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q3.pdf",
+      "file_size": 47880,
+      "character_count": 53104,
+      "word_count": 9578,
+      "speakers": {
+        "Jamie Dimon": "Jamie Dimon",
+        "Jeremy Barnum": "Jeremy Barnum",
+        "At Investor Day": "At Investor Day",
+        "Glenn Schorr": "Glenn Schorr",
+        "Betsy Graseck": "Betsy Graseck",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Mike Mayo": "Mike Mayo",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Erika Najarian": "Erika Najarian",
+        "Jim Mitchell": "Jim Mitchell",
+        "Ken Usdin": "Ken Usdin"
+      },
+      "qa_sections": {
+        "qa_start": 6332,
+        "presentation_end": 6332,
+        "presentation_start": 0
+      },
+      "speaker_count": 11,
+      "has_qa_section": true
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "file": "2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.798060",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q2.pdf",
+      "file_size": 56967,
+      "character_count": 61431,
+      "word_count": 10806,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "James Dimon": "James Dimon",
+        "And Chris": "And Chris",
+        "Betsy Graseck": "Betsy Graseck",
+        "Steven Alexopoulos": "Steven Alexopoulos",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Michael Mayo": "Michael Mayo",
+        "James Mitchell": "James Mitchell",
+        "Kenneth Usdin": "Kenneth Usdin",
+        "Glenn Schorr": "Glenn Schorr",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Saul Martinez": "Saul Martinez",
+        "Christoph Kotowski": "Christoph Kotowski"
+      },
+      "qa_sections": {
+        "qa_start": 8333,
+        "presentation_end": 8333,
+        "presentation_start": 0
+      },
+      "speaker_count": 13,
+      "has_qa_section": true
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "file": "2025_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.620798",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2025_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2025_Q1.pdf",
+      "file_size": 54914,
+      "character_count": 59982,
+      "word_count": 10361,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Home Lending": "Home Lending",
+        "Ken Usdin": "Ken Usdin",
+        "Jamie Dimon": "Jamie Dimon",
+        "Erika Najarian": "Erika Najarian",
+        "Steven Chubak": "Steven Chubak",
+        "And Steve": "And Steve",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Jim Mitchell": "Jim Mitchell",
+        "Betsy Graseck": "Betsy Graseck",
+        "Mike Mayo": "Mike Mayo",
+        "Glenn Schorr": "Glenn Schorr",
+        "Saul Martinez": "Saul Martinez"
+      },
+      "qa_sections": {
+        "qa_start": 10598,
+        "presentation_end": 10598,
+        "presentation_start": 0
+      },
+      "speaker_count": 14,
+      "has_qa_section": true
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "file": "2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.452947",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q4.pdf",
+      "file_size": 44948,
+      "character_count": 47260,
+      "word_count": 8205,
+      "speakers": {
+        "Financial Officer": "Financial Officer",
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Jamie Dimon": "Jamie Dimon",
+        "Mike Mayo": "Mike Mayo",
+        "Jim Mitchell": "Jim Mitchell",
+        "Erika Najarian": "Erika Najarian",
+        "Betsy Graseck": "Betsy Graseck",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Gerard Cassidy": "Gerard Cassidy"
+      },
+      "qa_sections": {
+        "qa_start": 12174,
+        "presentation_end": 12174,
+        "presentation_start": 0
+      },
+      "speaker_count": 9,
+      "has_qa_section": true
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "file": "2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.327810",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q3.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q3.pdf",
+      "file_size": 54457,
+      "character_count": 61611,
+      "word_count": 10844,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Jim Mitchell": "Jim Mitchell",
+        "Steven Chubak": "Steven Chubak",
+        "Jamie Dimon": "Jamie Dimon",
+        "Erika Najarian": "Erika Najarian",
+        "Glenn Schorr": "Glenn Schorr",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "But Gerard": "But Gerard",
+        "Mike Mayo": "Mike Mayo",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Betsy Graseck": "Betsy Graseck",
+        "Saul Martinez": "Saul Martinez"
+      },
+      "qa_sections": {
+        "qa_start": 9104,
+        "presentation_end": 9104,
+        "presentation_start": 0
+      },
+      "speaker_count": 12,
+      "has_qa_section": true
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "file": "2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.162036",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q2.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q2.pdf",
+      "file_size": 48452,
+      "character_count": 53028,
+      "word_count": 9202,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Steven Chubak": "Steven Chubak",
+        "Saul Martinez": "Saul Martinez",
+        "Ken Usdin": "Ken Usdin",
+        "Glenn Schorr": "Glenn Schorr",
+        "Mike Mayo": "Mike Mayo",
+        "Betsy Graseck": "Betsy Graseck",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Investment Bank": "Investment Bank",
+        "Erika Najarian": "Erika Najarian",
+        "Jim Mitchell": "Jim Mitchell"
+      },
+      "qa_sections": {
+        "qa_start": 10944,
+        "presentation_end": 10944,
+        "presentation_start": 0
+      },
+      "speaker_count": 11,
+      "has_qa_section": true
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "file": "2024_Q1.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:20.014251",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2024_Q1.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2024_Q1.pdf",
+      "file_size": 26999,
+      "character_count": 17311,
+      "word_count": 3012,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Betsy Graseck": "Betsy Graseck",
+        "James Dimon": "James Dimon",
+        "James Mitchell": "James Mitchell",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Kenneth Usdin": "Kenneth Usdin",
+        "Michael Mayo": "Michael Mayo",
+        "Glenn Schorr": "Glenn Schorr",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Charles Peabody": "Charles Peabody"
+      },
+      "qa_sections": {
+        "qa_start": 14587,
+        "presentation_end": 14587,
+        "presentation_start": 0
+      },
+      "speaker_count": 10,
+      "has_qa_section": true
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "file": "2023_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T11:11:19.947184",
+      "source": "manual_pdf",
+      "source_file": "JPM_FY2023_Q4.pdf",
+      "source_path": "/Users/shicheny/Documents/GitHub/FinSearch AI/data/earnings_calls_manual/JPM/JPM_FY2023_Q4.pdf",
+      "file_size": 42815,
+      "character_count": 44418,
+      "word_count": 7612,
+      "speakers": {
+        "Jeremy Barnum": "Jeremy Barnum",
+        "Jim Mitchell": "Jim Mitchell",
+        "Ebrahim Poonawala": "Ebrahim Poonawala",
+        "Erika Najarian": "Erika Najarian",
+        "Mike Mayo": "Mike Mayo",
+        "Gerard Cassidy": "Gerard Cassidy",
+        "Manan Gosalia": "Manan Gosalia",
+        "Glenn Schorr": "Glenn Schorr",
+        "Charles Peabody": "Charles Peabody",
+        "Jamie Dimon": "Jamie Dimon"
+      },
+      "qa_sections": {
+        "qa_start": 13610,
+        "presentation_end": 13610,
+        "presentation_start": 0
+      },
+      "speaker_count": 10,
+      "has_qa_section": true
+    }
+  ]
+}

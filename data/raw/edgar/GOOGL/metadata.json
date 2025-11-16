@@ -1,0 +1,109 @@
+{
+  "ticker": "GOOGL",
+  "filings": [
+    {
+      "type": "10-Q",
+      "date": "2025-10-30",
+      "year": "2025",
+      "quarter": 4,
+      "raw_file": "raw_10-Q_2025_Q4.htm",
+      "parsed_file": "10-Q_2025_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:28:55.212923",
+      "cik": "0001652044",
+      "accession_number": "0001652044-25-000091",
+      "report_date": "2025-09-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2025-07-24",
+      "year": "2025",
+      "quarter": 3,
+      "raw_file": "raw_10-Q_2025_Q3.htm",
+      "parsed_file": "10-Q_2025_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:28:56.701052",
+      "cik": "0001652044",
+      "accession_number": "0001652044-25-000062",
+      "report_date": "2025-06-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2025-04-25",
+      "year": "2025",
+      "quarter": 2,
+      "raw_file": "raw_10-Q_2025_Q2.htm",
+      "parsed_file": "10-Q_2025_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:28:57.786882",
+      "cik": "0001652044",
+      "accession_number": "0001652044-25-000043",
+      "report_date": "2025-03-31"
+    },
+    {
+      "type": "10-K",
+      "date": "2025-02-05",
+      "year": "2025",
+      "quarter": null,
+      "raw_file": "raw_10-K_2025.htm",
+      "parsed_file": "10-K_2025.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:28:59.453621",
+      "cik": "0001652044",
+      "accession_number": "0001652044-25-000014",
+      "report_date": "2024-12-31"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-10-30",
+      "year": "2024",
+      "quarter": 4,
+      "raw_file": "raw_10-Q_2024_Q4.htm",
+      "parsed_file": "10-Q_2024_Q4.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:00.841075",
+      "cik": "0001652044",
+      "accession_number": "0001652044-24-000118",
+      "report_date": "2024-09-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-07-24",
+      "year": "2024",
+      "quarter": 3,
+      "raw_file": "raw_10-Q_2024_Q3.htm",
+      "parsed_file": "10-Q_2024_Q3.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:02.127325",
+      "cik": "0001652044",
+      "accession_number": "0001652044-24-000079",
+      "report_date": "2024-06-30"
+    },
+    {
+      "type": "10-Q",
+      "date": "2024-04-26",
+      "year": "2024",
+      "quarter": 2,
+      "raw_file": "raw_10-Q_2024_Q2.htm",
+      "parsed_file": "10-Q_2024_Q2.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:03.119885",
+      "cik": "0001652044",
+      "accession_number": "0001652044-24-000053",
+      "report_date": "2024-03-31"
+    },
+    {
+      "type": "10-K",
+      "date": "2024-01-31",
+      "year": "2024",
+      "quarter": null,
+      "raw_file": "raw_10-K_2024.htm",
+      "parsed_file": "10-K_2024.txt",
+      "rag_ingested": false,
+      "saved_at": "2025-11-09T19:29:04.668778",
+      "cik": "0001652044",
+      "accession_number": "0001652044-24-000022",
+      "report_date": "2023-12-31"
+    }
+  ]
+}
