@@ -57,4 +57,4 @@ Thumbs.db
 # Database
 *.db
 *.sqlite
-chroma_db/
+# chroma_db/ - Now tracked with Git LFS
