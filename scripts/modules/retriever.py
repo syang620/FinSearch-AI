@@ -30,12 +30,12 @@ class HybridRetriever:
 
     def __init__(
         self,
-        collection_name: str = "finsearch",
-        embedding_model: str = "BAAI/bge-small-en-v1.5",
+        collection_name: str = "financial_documents",  # Updated to match the populated DB
+        embedding_model: str = "BAAI/bge-base-en-v1.5",  # Changed to base model (768 dims)
         use_hybrid: bool = True,
         dense_weight: float = 0.7,
         sparse_weight: float = 0.3,
-        persist_directory: str = "data/processed/embeddings"
+        persist_directory: str = "data/chroma_db"  # Updated to use the populated DB
     ):
         """
         Initialize the hybrid retriever.
